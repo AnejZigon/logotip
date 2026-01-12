@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+	<meta charset="UTF-8">
+	<title>Adidas znak na Canvas</title>
+	<style>
+		  body {
+			margin: 0;
+			padding: 0;
+			background-color: #d1d1d1;
+			background-image: url(slike/odzadje.avif);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+			width: 100vw;
+		  }
+
+		  #myCanvas {
+			position: absolute;
+			top: 10px;
+			left: 10px;
+			transform: scale(0.2); 
+			transform-origin: top left; 
+			pointer-events: none; 
+		  }
+		</style>
+</head>
+
+<body>
+<canvas id="myCanvas" width="1168" height="657" ></canvas>
+
+<script>
+  const canvas = document.getElementById('myCanvas');
+  const ctx = canvas.getContext('2d');
+	
+  
+	ctx.beginPath();
+	// tu bomo dodali beizerjeve krivulje
+	ctx.fillStyle = "black"; // barva logotipa
+	ctx.moveTo(277.96, 466.00);
+	ctx.bezierCurveTo(277.96, 466.00, 397.17, 396.09, 397.17, 396.09);
+	ctx.bezierCurveTo(397.17, 396.09, 469.52, 520.99, 469.52, 520.99);
+	ctx.bezierCurveTo(469.52, 520.99, 309.47, 520.79, 309.47, 520.79);
+	ctx.bezierCurveTo(309.47, 520.79, 277.96, 466.00, 277.96, 466.00);
+	ctx.closePath();
+	// drugi segment
+	ctx.moveTo(413.26, 335.20);
+	ctx.bezierCurveTo(413.26, 335.20, 519.06, 520.40, 519.06, 520.40);
+	ctx.bezierCurveTo(519.06, 520.40, 679.63, 520.82, 679.63, 520.82);
+	ctx.bezierCurveTo(679.63, 520.82, 533.27, 265.96, 533.27, 265.96);
+	ctx.bezierCurveTo(533.27, 265.96, 413.26, 335.20, 413.26, 335.20);
+	ctx.closePath();
+
+	// tretji segment
+	ctx.moveTo(548.45, 204.92);
+	ctx.bezierCurveTo(548.45, 204.92, 729.88, 520.92, 729.88, 520.92);
+	ctx.bezierCurveTo(729.88, 520.92, 890.51, 520.74, 890.51, 520.74);
+	ctx.bezierCurveTo(890.51, 520.74, 668.14, 135.50, 668.14, 135.50);
+	ctx.bezierCurveTo(668.14, 135.50, 548.45, 204.92, 548.45, 204.92);
+	ctx.closePath();
+	ctx.fill(); // izpolni logotip s črno barvo
+</script>
+</body>
+</html>
